@@ -31,10 +31,12 @@
   <%= @application.semester_year %>
 </p>
 
+<% if current_student%>
 <p>
   <b>Student Number:</b>
   <%= @application.student.student_number %>
 </p>
+<% end %>
 
 <p>
   <b>Status:</b>

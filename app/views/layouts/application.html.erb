@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AcrossEc</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
 
@@ -9,87 +9,112 @@
 
 </head>
 <body>
-
+<div id="container" width="900" height="780">	
+<div id="images">
+			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
+			</div>
+			</div>
 
 	<p class= "flash-error"><%= flash[:alert] %></p>
 
 	<p class= "flash-notice"><%= flash[:notice] %></p>
 
 
- <% if current_registrar %>	
 
-<p> <%= link_to "#{current_registrar.proper_name}", current_registrar %> </a><p> 
-
-<%= link_to "Log out", '/registrarlogout' %>
-<% end %>
-
-<% if current_student %>	
-
-
-<p> <%= link_to "#{current_student.proper_name}", current_student %> </a><p> 
-
-<%= link_to "Log out", '/studentlogout' %>
-<% end %>
-
-
-<div id="logo" ><img src="http://s13.postimage.org/dsjxojht3/plogo.gif" alt="Across EC logo"  width="245" height="145">
-
-<div id="topTitle">
-<h1> <%= @title %> </h1> 
-</div>
 
 </div> 
 
 <div id="box">
 
+	    <div id="demo-1" class="demobox">
+		<div id="logo"><a href="#"><img src="http://i49.tinypic.com/2ef2uza.gif" width="230" height="70"/></a></div>
+		 <% if current_registrar %>	
 
-<div id="navigationM">
-<ul>
-<li><a href="/pages/home">Home </a></li> 
-<li><a href="/pages/about">AboutAcrossEC</a></li> 
-<li><a href="/schedules">ViewSchedule</a></li>
-<% if current_student %>
-<li><a href="/applications/new">Apply </a></li>
-<% else %>
-<li><a href="/loginasstudent">Apply</a></li>
-<% end %>
-<% if current_registrar %>
-<li><a href="/applications">View Applications </a></li>
-<% else %>
-<li><a href="#status">ApplicationStatus</a></li>
-<% end %>
-<li><a href="#">HaveQuestions</a></li> 
-</ul>
-</div> 
-
-<div id="content">
-<%= yield %>
-</div> 
+<div id="registrar_student">
+		<p> <%= link_to "#{current_registrar.proper_name}", current_registrar %> </a><p> 
 
 
-<div id="navigationD">
-<ul>
-<li><a href="/pages/about">About us </a></li> 
-<li><a href="/pages/contact">Contact us </a></li>
-<li><a href="/pages/privacy">Privacy Policy</a></li>
-</ul>
+		<%= link_to "Log out", '/registrarlogout' %>
+		</div>
+
+		<% end %>
+
+		<% if current_student %>	
+
+<div id="registrar_student">
+		<p> <%= link_to "#{current_student.proper_name}", current_student %> </a><p> 
+
+		<%= link_to "Log out", '/studentlogout' %>
 </div>
+		<% end %>
+		<% if (current_student == false) && (current_registrar == false) %>
+				<div id="log_in">
+				<li><a href="#" STYLE="TEXT-DECORATION: NONE">Log in</a></li>
+				</div>
+		<% end %>
+				</div>
 
-<div id="logo_footer" ><img src="http://s14.postimage.org/4t1uh9va9/CMSidra.jpg" alt="CMU and QF logo"  width="300" height="100">
 
 
+			 <nav>
+			       <ul id="top_nav" class="clearfix">
 
-</div>
+				
+					<li><a href="/schedules">View Schedule</a></li>
+					<% if current_student %>
+					<li><a href="/applications/new">Apply </a></li>
+					<% else %>
+					<li><a href="/loginasstudent">Apply</a></li>
+					<% end %>
+					<% if current_registrar %>
+					<li><a href="/applications">ViewApplications </a></li>
+					<% else %>
+					<li><a href="#status">ApplicationStatus</a></li>
+					<% end %>
+					<li><a href="#">Have Questions</a></li>
+				
+						<li><a href="/loginasregistrar">Registrars Log in</a></li> 
+				
+			       </ul>
+			</nav>
 
+		<div id="content">
+			
+
+		
+		<%= yield %>
+
+		</div> 
+
+
+			
+<!--
+			<div id="logo_footer" ><img src="assets/cmu-qf.gif" alt="CMU and QF logo"  width="300" height="100">
+			</div>
+--> 
 </div>
 
 </body>
 
 <footer>
+	<div id="logo_footer" ><img src="http://i45.tinypic.com/35ko5c6.gif" alt="CMU and QF logo"  width="300" height="100">
+			</div>
 
-	
+			
+	<div id="second_nav">
 
-	</footer>
+<ul>
+<li><a href="#home" style="text-decoration: none">Home </a></li> 
+<li><a href="#about" STYLE="TEXT-DECORATION: NONE">About AcrossEC</a></li> 
+<li><a href="#View Schedule" STYLE="TEXT-DECORATION: NONE">Contact Us</a></li>
+<li><a href="#Apply" STYLE="TEXT-DECORATION: NONE">Privacy Policy</a></li>
+<li><a href="#q" STYLE="TEXT-DECORATION: NONE">Questions</a></li> 
+
+
+</ul>
+
+</footer>
+
 </html>
 
 

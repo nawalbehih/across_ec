@@ -10,9 +10,12 @@
       </ul>
     </div>
   <% end %>
+<br>
+<br>
+<br>
  <div class="field">
     <% f.label :student_id %><br />
-    <% f.number_field :student_id %>
+    <%= f.hidden_field :student_id %>
   </div>
   <div class="field">
     <%= f.label :application_date %><br />

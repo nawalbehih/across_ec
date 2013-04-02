@@ -19,6 +19,14 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= current_student || current_registrar
   end
+  
+  def registrar_logged_in?
+    current_registrar != nil
+  end
+  
+  def student_logged_in?
+    current_student != nil
+  end
 
   def current_ability
     if current_user.kind_of?(Registrar)
@@ -31,4 +39,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_registrar
   helper_method :current_student
   helper_method :current_ability
+  helper_method :registrar_logged_in?
+  helper_method :student_logged_in?
 end

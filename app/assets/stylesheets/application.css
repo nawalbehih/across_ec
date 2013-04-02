@@ -1,219 +1,389 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-#logo {
-position: relative;
-margin-left: 15%; 
-margin-top: 1%;
-}
-
-
-#logo h1 {
-
-	text-align:justify; 
-	position: relative;
-	margin-left: 25%; 
-	margin-top: 1%;
-
-	/*argin-bottom: 2%;*/ 
-}
-
-#logo_footer{
-
-	/* margin-left: 30%;
-	margin-top: 7%;*/
-	
-
-}
-#username a {
-
-/*text-align: right;*/
-float: right; 
-color: black; 
-margin-top:14%;
-margin-right:18%;
-
-}
-
-#navigationM {
-
-margin-top: 17px; 
-/*background-color:#4682b4;*/
-background-color:#2b4f81;
-height:40px;
-text-align: left;
-
-}
-
-
-#navigationD {
-margin-top: 17px; 
-/*background-color: #82CAFA;*/ 
-background-color:#2b4f81;
-height:40px;
-text-align: right;
-}
-
-#box {
-
-padding-top: 1px; 
-padding-bottom: 20px;
-/*margin: auto;*/
-
-  margin-left:auto;
-  margin-right:auto;
-  width:960px;
-
-background-color: #D3D3D3;
-/* background-color:#b8b8b8; darker grey*/
-
--moz-border-radius-bottomright: 20px;
-border-bottom-right-radius: 20px;
-
-
--moz-border-radius-bottomleft: 20px;
-border-bottom-left-radius: 20px;
-
--moz-border-radius-topright: 20px;
-border-top-right-radius: 20px;
-
--moz-border-radius-topleft: 20px;
-border-top-left-radius: 20px;
-
-
-}
-
 body {
+	background-image:url(http://i49.tinypic.com/333wlk5.jpg); 
+		/*http://s12.postimg.org/p41iooa9p/background.jpg');*/ 
+		font-family: 'Julius Sans One', sans-serif;
+}
 
-	/*font-family: "Times New Roman", Times, serif;
-	/*background: grey;*/
+#log_in
+{
+	margin-top: -30px;
+	margin-right: 80px;
+	float: right;
+	font-size: 30px;
+	 color: #098642;
+	font-weight: bold;
+	width: 100px;
+list-style: none;
+
 	
-	font-family: Tahoma, Geneva, sans-serif;
-	margin-right: 50px;
-	background-image:url('pattern_2.jpg'); 
+}
 	
-	/*background-color:#ededed;*/
-
-	position: relative;
+#box {
+padding:-50px; 
+margin-left: 18%;
+margin-right: 10%;
+height: 700px; 
+top: 150px;
 }
 
-header {
 
-	background: white;
+#logo { 
+margin-left: -9%;
+/* margin-bottom: 7%;*/ 
+margin-top: 3%;
+
 }
 
-
-footer {
-
-	margin: 0;
-	padding: 0;
+#images
+{
+	padding: 5px;
+	margin-left: 15.5%;
+	margin-right: 15.5%;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.6;
+	border: none;
+	top: 180px;
 }
+#content
+	{
+    margin-top: -3%;
+		z-index:1;
+	}
+
+
 ul
 {
-
-list-style-type: none;
-margin:20px;
-padding:10px;
-overflow:hidden;
+padding:18px;
 color: white;
 }
+
+
 li
 {
-
+font-size: 18px;
 float:left;
 }
 
-#navigationD li {
+a:visited {color:black;} /* visited link */
+a:hover {color:black;  }   /* mouse over link */
+a:active {color:grey;}  /* selected link */
+a::link {text-decoration: none}
 
-	float : right;
+
+#circle {
+	color: white;
+	text-align: center;
+	float: right;
+    background: black;
+   width: 230px;
+    height: 40px;
+
 }
 
+#listings
+{
+	font-family: 'Julius Sans One', sans-serif;	
+}
+#squareNav {
+		font-family: 'Julius Sans One', sans-serif;
+	color: white;
+	text-align: center;
+	float: left;
+    background: black;
+    width: 200px;
+    height: 40px;
 
-a:link {
+}
+
+#squareNav_ev{
+	color: white;
+	text-align: center;
+	float: left;
 	
-	font-style: normal;
-	color: black;
+    background: black;
+    width: 40px;
+    height: 40px;
+
+}
+#circleNav {
+	color: white;
+	text-align: center;
+	float: left;
+	margin-left: 3%; 
+    background: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
+
+#first_column{
+	padding:-30px;
+	font-size:18px;
+		font-family: 'Julius Sans One', sans-serif;
+ margin-top: 7%; 
+margin-left: 2%;
+
+float: left; 
+width: 70%;
+
+}
+
+
+
+#first_column_down{
+		font-family: 'Julius Sans One', sans-serif;
+margin-top: -29%;
+margin-left: 650px;
+width: 200px;
+font-size:12px
+}
+
+
+
+#demo-1 {
+
+	-webkit-transform: scale(1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+}
+#demo-1 #circleNav:hover{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+}
+
+#demo-1 #squareNav:hover{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+}
+
+
+#top_nav {
+
+margin-top: 5%;
+margin-left: 5%;
+}
+ul#top_nav li {
+	font-family: 'Julius Sans One', sans-serif;
+  list-style: none;
+  float: left;
+}
+
+#top_nav li a {
+
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  height: 50px;
+  width: 140px;
+  line-height: 50px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
+ 
+  border-right: 1px solid #323235;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  
+  background-image: -moz-linear-gradient(top, #535357, #757575);
+  background-image: -ms-linear-gradient(top, #535357, #757575);
+  background-image: -webkit-linear-gradient(top, #535357, #757575);
+  background-image: linear-gradient(top, #535357, #757575);
+  
+  -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+     -moz-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+          box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+
+}
+
+ul#top_nav li a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  background-image: -moz-linear-gradient(top, #575757, #575757);
+  background-image: -ms-linear-gradient(top, #575757, #313132);
+  background-image: -webkit-linear-gradient(top, #575757, #313132);
+  background-image: linear-gradient(top, #575757, #313132);
+  
+  -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+      -moz-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+           box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.2), 0 1px 0px #575757;
+}
+
+
+ul#top_nav li a:active  {
+  background: #414142;
+  -webkit-box-shadow: inset 0 2px 3px rgba(0,0,0, 0.2);
+      -moz-box-shadow: inset 0 2px 3px rgba(0,0,0, 0.2);
+           box-shadow: inset 0 2px 3px rgba(0,0,0, 0.2);
+}
+
+
+#mapimage
+{
+	height:300px;
+	width:550px;
+	margin-top:96px;
+	margin-left: 22px;
+
+}
+
+#second_nav{
+	font-family: 'Julius Sans One', sans-serif;
+margin-top: 19%; 
+margin-left: 40%; 
+/* height:40px;
+width:800px; */ 
+color: white;
+text-align: left;
+list-style: none;
+
+
+}
+ #second_nav li a:link {
+	color:black;
 	margin-right: 50px;
-	   /* unvisited link */
-}
-a:visited {color:white;} /* visited link */
-a:hover {color:white;}   /* mouse over link */
-a:active {}  /* selected link */
 
+	}   
+	
+h2
+{
+ color: #098642; 
+ font-size: 32px;} 
 
-#content {
-	margin-left: 10%;
-
-} 
-
-
-p {
-
-padding-right: 12px;
-
+h3
+{
+	color:#098642;
 }
 
-h1{
-	/*color: #3A7BBF;*/
-	/* color: black; */
-	color: #2b4f81 ; /*blue */
-	/* color: #868279; grey-ish*/ 
-	/*color: #4DADC7; /*blue-ish*/ 
-
-	font-size: 250%; 
+#logo_footer { 
+margin-top: -29px;
+float: left;
+position: relative;
+margin-left: 15%;
 }
 
-h1, h2, h3 {
+	
+	#second_column{
+font-family: 'Julius Sans One', sans-serif;
+margin-top: 14%;
+float: left; 
+width: 25%;
+}
+
+.login {       /*log in button */
+position:relative;
+left:80px;
+top:2px;
+margin: 0 auto;
+padding: 20px 20px 20px;
+width: 300px;
+background: white;
+border-radius: 3px;
+-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+height:150px;
+
+}
+#signup
+{
+	margin-left:-30px;
+}
+
+
+.login:before {
+content: '';
+position: absolute;
+top: -8px;
+right: -8px;
+bottom: -8px;
+left: -8px;
+z-index: -1;
+background: rgba(0, 0, 0, 0.08);
+border-radius: 4px;
+}
+.login h1 {   /*h1*/
+margin: -20px -20px 21px;
+line-height: 40px;
+font-size: 15px;
+font-weight: bold;
+color: #555;
 text-align: center;
-font-family: Tahoma, Geneva, sans-serif;
+text-shadow: 0 1px white;
+background: #f3f3f3;
+border-bottom: 1px solid #cfcfcf;
+border-radius: 3px 3px 0 0;
+background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+-webkit-box-shadow: 0 1px whitesmoke;
+box-shadow: 0 1px whitesmoke;
+}
+.login p { 
+margin: 20px 0 0;
+width:230px;
+height:50px;
+}
+.login p:first-child {
+margin-top: 0;
+}
+.login input[type=text], .login input[type=password] {
+width: 230px;
+}
+.login p.submit {
+text-align: right;
+font-size:15px;
 }
 
-
-
-
-#container{
-
-	position: relative;
-	margin-left: 4%;
-	margin-right: 14%;
-	margin-top: 7%;
-	width: 700px;
-}
-
-#prev {
-
-position: absolute;
-top: 175px;
-left: -20px;
-z-index: 10;
+#actions
+{
+	width:89;
+	height:50;
 
 }
-
-
-#next {
-
-position: absolute;
-top: 175px;
-right: -21px;
-z-index: 10;
+#registrar_student
+{
+	float:right;
+	margin-top:-86px;
 
 }
+#registration_form
+{
+	margin-right:30px;
 
+}
+#flash-error
+{
+	color:red;
+}
+/*
+#container
+{
+	padding: 5px;
+	margin-left: 15.5%;
+	margin-right: 15.5%;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.6;
+	border: none;
+	top: 180px;
+	width: 900px;
+	 height: 780px;
+}
+*/
 
-.slider { 
+.std {
+	width:30px;
+}
 
-width:  700px;
-height: 350px;
-border: 1px solid #fff; 
-
+td
+{
+	font-weight: bold;
+	overflow: hidden;
+	max-width:80px;
+	max-height:80px;
+	width:100px;
+	padding:15px;
+	
 }

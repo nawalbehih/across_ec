@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<br> <br> <br> <br> <br> 
 <p>
   <b>First name:</b>
   <%= @student.first_name %>
@@ -40,6 +40,7 @@
   <b>Year of graduation:</b>
   <%= @student.year_of_graduation %>
 </p>
+
 <% if can? :update, @student %>
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <% end %>

@@ -1,14 +1,27 @@
-<h1>Log in as a Student</h1>
+
 
 <%= form_tag sessions_students_path do %>
-  <div class="field">
+<div id="second_column">
+  <div class="login">
+    <h1>Log in as a Student</h1>
     <%= label_tag :email %>
+<br />
     <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
+      <div class="field">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-  <p> Don't have an account? <%= link_to "Sign Up", new_student_path %> </p>
+   <div class="actions"><%= submit_tag "Log in" %></div>
+<div id="Signup">
+	<br /><br /><br />
+    <p> Don't have an account? <%= link_to "Sign Up", new_student_path %> </p>
+  </div>
+</div>
+
+
+</div>
+ 
+
+
 <% end %>
+
