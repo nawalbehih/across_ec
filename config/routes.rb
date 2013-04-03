@@ -7,7 +7,7 @@ AcrossEc::Application.routes.draw do
   get "pages/contact"
 
   get "pages/privacy"
-
+  
   root :to => 'pages#home'
  
   match '/loginasregistrar', :to => 'sessions#new'
@@ -16,7 +16,8 @@ AcrossEc::Application.routes.draw do
   match '/studentlogout', :to => 'sessions_students#destroy'
   match '/applications/:id/approve', :to => 'applications#approve'
   match '/applications/:id/decline', :to => 'applications#decline'
-
+  match '/home', :to => 'pages#home'
+  
   resources :universities
   resources :schedules
   resources :sessions

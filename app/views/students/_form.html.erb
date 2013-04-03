@@ -1,77 +1,81 @@
 <%= form_for(@student) do |f| %>
-	<div id="third_column">
+
   <% if @student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
       <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li><%= msg %></li><br>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-<div class="form">	
-	<div id="third_column">
+  <div class="form_field">
+
+     <h1>New Student</h1>
+
   <div class="field">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name , :class => 'inside'%>
 
   </div>
+
+<br>
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name , :class => 'inside'%>
   </div>
+
+<br>
   <div class="field">
     <%= f.label :student_number %><br />
-    <%= f.text_field :student_number %>
+    <%= f.text_field :student_number , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :mobile %><br />
-    <%= f.text_field :mobile %>
+    <%= f.text_field :mobile , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :university_id %><br />
-    <%= collection_select(:student, :university_id, University.all, :id, :name) %><br />
+    <%= collection_select(:student, :university_id, University.all, :id, :name) %>
   </div>
+
+<br>
   <div class="field">
     <%= f.label :major %><br />
-    <%= f.text_field :major %>
+    <%= f.text_field :major , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :year_of_graduation %><br />
-    <%= f.date_select :year_of_graduation %>
+    <%= f.date_select :year_of_graduation , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password , :class => 'inside'%>
   </div>
+<br>
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation , :class => 'inside'%>
 
   </div>
-
+<br>
   <div class="actions">
     <%= f.submit %>
   </div>
-</div>
+
 <% end %>
-</div>
-
-
-</div>
 </div>

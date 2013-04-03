@@ -9,16 +9,17 @@
 
 </head>
 <body>
+	<div id="flash_error">
+		<p class= "flash-error"><%= flash[:alert] %></p>
+
+		<p class= "flash-notice"><%= flash[:notice] %></p>
+
+	</div>
 <div id="container" width="900" height="780">	
 <div id="images">
 			<img src="http://i45.tinypic.com/beyl3b.jpg" width="900" height="780">
 			</div>
 			</div>
-
-	<p class= "flash-error"><%= flash[:alert] %></p>
-
-	<p class= "flash-notice"><%= flash[:notice] %></p>
-
 
 
 
@@ -27,14 +28,19 @@
 <div id="box">
 
 	    <div id="demo-1" class="demobox">
-		<div id="logo"><a href="#"><img src="http://i49.tinypic.com/2ef2uza.gif" width="230" height="70"/></a></div>
+		<div id="logo">
+		<%= link_to image_tag('http://i49.tinypic.com/2ef2uza.gif'),  :controller => 'pages', :action => 'home', :options => {:style =>"height: 100px;"}%> </div>
+		<div id="log_link">
+			<%= button_to 'Log In', :controller => 'sessions_students', :action => 'new' %>
+		 
+			</div>
 		 <% if current_registrar %>	
 
 <div id="registrar_student">
 		<p> <%= link_to "#{current_registrar.proper_name}", current_registrar %> </a><p> 
 
 
-		<%= link_to "Log out", '/registrarlogout' %>
+		<%= button_to "Log out", '/registrarlogout' %>
 		</div>
 
 		<% end %>
@@ -44,7 +50,7 @@
 <div id="registrar_student">
 		<p> <%= link_to "#{current_student.proper_name}", current_student %> </a><p> 
 
-		<%= link_to "Log out", '/studentlogout' %>
+		<%= button_to "Log out", '/studentlogout' %>
 </div>
 		<% end %>
 		<% if (current_student == false) && (current_registrar == false) %>
@@ -80,8 +86,6 @@
 
 		<div id="content">
 			
-
-		
 		<%= yield %>
 
 		</div> 
