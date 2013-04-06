@@ -4,7 +4,7 @@
 <br>
 <br>
 <br>
-<table>
+<table class="gridtable">
   <tr>
     <th>First name</th>
     <th>Last name</th>
@@ -14,8 +14,7 @@
     <th>Major</th>
     <th>Year of graduation</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @students.each do |student| %>
@@ -28,6 +27,7 @@
     <td><%= student.mobile %></td>
     <td><%= student.major %></td>
     <td><%= student.year_of_graduation %></td>
+
     <td><%= link_to 'Show', student %></td>
     <% if can? :update, student %>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>

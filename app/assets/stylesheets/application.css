@@ -30,7 +30,7 @@ top: 150px;
 #logo { 
 margin-left: -9%;
 /* margin-bottom: 7%;*/ 
-margin-top: 3%;
+margin-top: 2%;
 
 
 }
@@ -171,8 +171,8 @@ font-size:12px
 
 #top_nav {
 
-margin-top: 0.5%;
-margin-left: 5%;
+	margin-top: 0.5%;
+	margin-left: 12%;
 }
 ul#top_nav li {
 	font-family: 'Julius Sans One', sans-serif;
@@ -365,6 +365,7 @@ font-size:15px;
 #flash_error
 {
 	color:red;
+	float:right;
 }
 /*
 #container
@@ -460,7 +461,8 @@ border-radius: 4px;
 {float:right;
 	color:black;
 	width: 200px;
-	font-size:22px;}
+	font-size:22px;
+	margin-top:-50px}
 
 #error_explanation h2 {
 
@@ -488,3 +490,125 @@ border-radius: 4px;
 	width:200px;
 	height:100px;
 }
+/*
+table, td, th
+{
+border:1px solid black;
+}
+*/
+td
+{
+
+text-align:center;
+}
+
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+.student_table {
+
+/*width: 40%;
+margin-left: 65px; */ 
+margin-top: 80px;
+position:relative;
+left:70px;
+top: 4px;
+padding: 20px 20px 20px;
+width: 330px;
+background: white;
+border-radius: 3px;
+-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+height:400px;
+font-size: 15px;
+
+
+}
+
+.inside {
+
+
+	width: 200px; 
+}
+
+
+.student_table h1 {
+margin: -20px -20px 21px;
+line-height: 40px;
+font-size: 15px;
+font-weight: bold;
+color: #555;
+text-align: center;
+text-shadow: 0 1px white;
+background: #f3f3f3;
+border-bottom: 1px solid #cfcfcf;
+border-radius: 3px 3px 0 0;
+background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+-webkit-box-shadow: 0 1px whitesmoke;
+box-shadow: 0 1px whitesmoke;
+
+}
+
+.student_table:before {
+content: '';
+position: absolute;
+top: -8px;
+right: -8px;
+bottom: -8px;
+left: -8px;
+z-index: -1;
+background: rgba(0, 0, 0, 0.08);
+border-radius: 4px;
+}
+
+#log_link
+{float:right;
+	color:black;
+	width: 200px;
+	font-size:22px;
+	margin-top:-50px}
+	
+.application_table
+	{
+		margin: -20px -20px 21px;
+		line-height: 40px;
+		font-size: 15px;
+		font-weight: bold;
+		color: #555;
+		text-align: center;
+		text-shadow: 0 1px white;
+		background: #f3f3f3;
+		border-bottom: 1px solid #cfcfcf;
+		border-radius: 3px 3px 0 0;
+		background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+		background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+		background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+		background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+		-webkit-box-shadow: 0 1px whitesmoke;
+		box-shadow: 0 1px whitesmoke;	
+	}
+

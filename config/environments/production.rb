@@ -64,4 +64,14 @@ AcrossEc::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+ActionMailer::Base.delivery_method = :smtp
+
+ActionMailer::Base.smtp_settings = {
+	:enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :authentication => 'plain',
+    :user_name => 'across.ec',
+    :password => 'across_ec123'
+  }
 end

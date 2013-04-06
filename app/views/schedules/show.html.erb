@@ -20,6 +20,19 @@
   <%= @schedule.semester_year %>
 </p>
 
+<p>
+   <b>Registrar:</b> 
+   <% temp = @schedule.registrar_id %>
+  <%= Registrar.find(temp).proper_name %>
+</p>
+
+<p>
+   <b>University:</b>
+	<% temp2 = @schedule.registrar_id %>
+	<% temp3 = Registrar.find(temp2).university_id %>
+	<%= University.find(temp3).name %>
+</p>
+
 <% if can? :update, @registrar %>
 <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
 <% end %>

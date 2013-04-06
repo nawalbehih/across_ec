@@ -1,8 +1,13 @@
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <% if current_student != nil %>
 
-<table>
+
+<table class="gridtable">
 
   <tr>
     <th>Application date</th>
@@ -11,8 +16,7 @@
     <th>Semester year</th>
     <th>Status</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 
@@ -40,7 +44,8 @@
 <% end %>
 <% if current_registrar != nil %>
 
-<table>
+<table class="gridtable">
+
   <tr>
     <th>Application date</th>
     <th>Course no</th>
@@ -50,9 +55,9 @@
     <th>Semester year</th>
     <th>Status</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
+
 <% @applications.each do |application| %>
   <tr>
     <% if current_registrar.university_id == application.university_id || current_registrar.admin? %>

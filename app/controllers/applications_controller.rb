@@ -96,6 +96,8 @@ class ApplicationsController < ApplicationController
   def decline
     application = Application.find(params[:id])
     application.update_attributes(:status => 'declined')
+	StudentMailer.application_declined(@application.student, @application).deliver
     redirect_to application_path(application)
   end
+
 end

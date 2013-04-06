@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="application_table">
 <p>
   <b>Application date:</b>
   <%= @application.application_date %>
@@ -42,7 +47,7 @@
   <b>Status:</b>
   <%= @application.status %>
 </p>
-
+</div>
 
 <% if current_registrar %>
  <%= button_to 'Approve', :controller => 'applications', :action => 'approve' %>

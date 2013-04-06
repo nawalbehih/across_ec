@@ -12,7 +12,8 @@
 
 <p>
   <b>University:</b>
-  <%= @registrar.university.id %>
+  <% temp = @registrar.university_id %>
+  <%= University.find(temp).name %>
 </p>
 
 <p>

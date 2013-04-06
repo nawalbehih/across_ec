@@ -5,10 +5,8 @@ gem 'bcrypt-ruby'
 gem 'rails'
 gem 'jquery-rails'
 gem 'execjs'
-gem "therubyracer"
 gem 'bootstrap-sass'
 gem 'carrierwave'
-gem "libv8"
 gem "cancan"
 
 
